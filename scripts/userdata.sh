@@ -16,15 +16,14 @@ aws configure set region us-east-1
 mkdir -p /var/www
 
 # update me
-git clone https://git-codecommit.us-east-1.amazonaws.com/v1/repos/Simple-Flask-Autoscaling /var/www
+git clone https://github.com/charliegriefer/simple-flask /var/www
 
 cd /var/www
 
 git config core.fileMode false
 
 # update me
-aws s3 cp s3://tci-s3-demo/simple-flask/.env .env
+aws s3 cp s3://my-whiskies/.env .env
 
 chmod +x scripts/post_userdata.sh
-
 ./scripts/post_userdata.sh

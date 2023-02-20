@@ -26,4 +26,4 @@ systemctl enable flaskapp.service
 systemctl restart nginx
 systemctl enable nginx
 
-echo 'Install complete'
+echo "Install complete"
