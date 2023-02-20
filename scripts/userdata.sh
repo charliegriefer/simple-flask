@@ -8,10 +8,11 @@ yum install gcc -y
 yum install build-essential -y
 yum install python3-pip python3-devel python3-setuptools -y
 
-git config --system credential.https://git-codecommit.us-east-1.amazonaws.com.helper '!aws --profile default codecommit credential-helper $@'
-git config --system credential.https://git-codecommit.us-east-1.amazonaws.com.UseHttpPath true
+# git config --system credential.https://git-codecommit.us-east-1.amazonaws.com.helper '!aws --profile default codecommit credential-helper $@'
+# git config --system credential.https://git-codecommit.us-east-1.amazonaws.com.UseHttpPath true
+git config --system usehttppath true
 
-aws configure set region us-east-1
+aws configure set region us-west-1
 
 mkdir -p /var/www
 
